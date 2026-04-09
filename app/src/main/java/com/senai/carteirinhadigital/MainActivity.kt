@@ -39,7 +39,7 @@ class MainActivity : ComponentActivity() {
             CarteirinhaDigitalTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) {
                     innerPadding ->
-                    CarteirinhaDigitalApp(
+                    CarteirinhaScreen(
                         modifier = Modifier
                             .padding(innerPadding)
                             .fillMaxSize()
@@ -50,72 +50,3 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Composable
-fun CarteirinhaDigitalApp(modifier: Modifier = Modifier) {
-    Box {
-        Image(
-            painter = painterResource(id = R.drawable.fundoroxo),
-            contentDescription = "fundo",
-            contentScale = ContentScale.Crop,
-            modifier = Modifier.fillMaxSize()
-        )
-        Column(
-            modifier = modifier.fillMaxSize(),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(space = 10.dp)
-        ) {
-            Image(
-                painter = painterResource(R.drawable.senai_logo),
-                contentDescription = "Senai logo preta",
-                modifier = Modifier
-                    .size(250.dp)
-            )
-            Image(
-                painter = painterResource(R.drawable.eu),
-                contentDescription = "Primo bigode",
-                contentScale = ContentScale.Crop,
-                modifier = Modifier
-                    .size(200.dp)
-                    .clip(CircleShape)
-                    .border(width = 2.dp, color = Color.Blue, CircleShape)
-            )
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
-            ) {
-                Text(
-                    text = "Nome: ",
-                    fontSize = 15.sp
-                )
-                Text(
-                    text = "Amanda Campillo",
-                    fontSize = 20.sp,
-                    fontWeight = FontWeight.Bold
-                )
-
-            }
-            Row(
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(8.dp)
-            ) {
-                Text(text = "Curso: ")
-                Text(text = "Desenvolvimento de Sistemas")
-            }
-
-            QrCode(conteudo = "90000000001755008306")
-        }
-    }
-}
-
-@Preview(
-    showSystemUi = true,
-    showBackground = true
-)
-@Composable
-fun CarteirinhaDigitalAppPreview() {
-    CarteirinhaDigitalTheme {
-        CarteirinhaDigitalApp(
-            modifier = Modifier.fillMaxSize()
-        )
-    }
-}
