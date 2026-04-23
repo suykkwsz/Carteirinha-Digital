@@ -1,6 +1,5 @@
 package com.senai.carteirinhadigital.feature.carteirinha.navigation
 
-import android.icu.number.NumberFormatter
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import com.senai.carteirinhadigital.app.navigation.Routes

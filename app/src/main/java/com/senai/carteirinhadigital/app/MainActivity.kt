@@ -16,15 +16,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            CarteirinhaDigitalTheme {
-                Scaffold(modifier = Modifier.Companion.fillMaxSize()) { innerPadding ->
-                    CarteirinhaScreen(
-                        modifier = Modifier.Companion
-                            .padding(innerPadding)
-                            .fillMaxSize()
-                    )
-                }
-            }
+            App()
         }
     }
 }

@@ -3,6 +3,8 @@ package com.senai.carteirinhadigital.app.navigation
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
+import com.senai.carteirinhadigital.feature.auth.navigation.authScreen
+import com.senai.carteirinhadigital.feature.carteirinha.navigation.carteirinhaScreen
 
 @Composable
 fun AppNavHost() {
@@ -19,7 +21,7 @@ fun AppNavHost() {
         )
 
         carteirinhaScreen(
-            onNavigateLogin = {
+            onNavigateToLogin = {
                 navController.navigate(Routes.Login)
             }
         )
