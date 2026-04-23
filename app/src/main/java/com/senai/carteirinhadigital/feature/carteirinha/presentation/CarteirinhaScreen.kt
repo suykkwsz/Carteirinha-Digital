@@ -1,4 +1,4 @@
-package com.senai.carteirinhadigital
+package com.senai.carteirinhadigital.feature.carteirinha.presentation
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
@@ -22,10 +22,13 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.rafaelcosta.carteirinhadigital_4devm_t1.feature.carteirinha.presentation.component.QrCode
-import com.senai.carteirinhadigital.ui.theme.CarteirinhaDigitalTheme
+import com.senai.carteirinhadigital.R
+import com.senai.carteirinhadigital.core.designsystem.theme.CarteirinhaDigitalTheme
 
 @Composable
-fun CarteirinhaScreen(modifier: Modifier = Modifier) {
+fun CarteirinhaScreen(
+    modifier: Modifier = Modifier,
+    onBackClick: () -> Unit = {}) {
     Box {
         Image(
             painter = painterResource(id = R.drawable.fundoroxo),
