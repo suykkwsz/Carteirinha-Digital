@@ -79,7 +79,14 @@ fun CarteirinhaScreen(
                 Text(text = "Desenvolvimento de Sistemas")
             }
 
-            QrCode(conteudo = "90000000001755008306")
+            QrCode(
+                conteudo = "90000000001755008306",
+                modifier = Modifier
+                    .border(
+                        4.dp,
+                        Color.Red
+                    )
+            )
         }
     }
 }
@@ -91,8 +98,6 @@ fun CarteirinhaScreen(
 @Composable
 fun CarteirinhaDigitalAppPreview() {
     CarteirinhaDigitalTheme {
-        CarteirinhaScreen(
-            modifier = Modifier.fillMaxSize()
-        )
+        CarteirinhaScreen()
     }
 }
